@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостевой Дом "Солнечный Пик"</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script thumbcarousel.js"></script>
+    <link rel="stylesheet" href="thumbcarousel styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height: 3000px;
+            position:relative;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            max-height: 70%;
+        }
+        .align-vertically {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .welcome-container {
+            position: relative;
+            text-align: center;
+            color: white;
+            overflow:hidden; 
+            margin: 50px 0 0 0;
+        }
+        .carousel, .iframe {
+            width: 50%; 
+            margin: auto;
+            max-height:60%;
+        }  
+        .col-md-1 {
+            padding: 0px;
+        }
+        .img-thumbnail img {
+            height: 100px;
+            object-fit: cover;
+        }
+        h2 {
+            padding-top: 50px;
+        }
+        .feedback {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feedback img {
+            width: 100%;
+        }
+        @media screen and (max-width: 600px) {
+            h1, h2 {
+                font-size: 1rem;
+            }
+            .carousel, .thumbcarousel, .feedback, .iframe {
+                width: 90%;
+            }
+             
+        }
+    </style>
+    
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top" style="margin-bottom: 50px">
+        <div class="navbar-brand">"Солнечный Пик"</div>
+        <button class="navbar-toggler" type="button" data-target="#collapsibleNavbar" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="collapsibleNavbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav w-75" >
+                <li class="nav-item"><a class="nav-link" href="#about_us">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rooms">Номера</a></li>
+                <li class="nav-item"><a class="nav-link" href="#our_photos">Фотоальбом</a></li>
+                <li class="nav-item"><a class="nav-link" href="#feedback">Отзывы</a></li>
+                <li class="nav-item"><a class="nav-link"  href="#contacts">Контакты</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="welcome-container">
+            <h1 class="text-dark text-center align-vertically" id="h1">КОМФОРТНЫЙ ОТДЫХ У МОРЯ</h1>
+            <img class="img-fluid" style="margin: -10% 0 -30% 0" src="Pictures/view.jpg" alt="Вид на море">           
+    </div>
+    <section class="justify-content-center" id="about_us">
+        <h2 class="text-secondary text-center">О НАС</h2>
+        <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Гостевой дом «Галчонок», расположен в тихом уголке поселка Лазаревское, вдали от шумной трассы и городской суеты. Гостей ждут светлые чистые комнаты, отделанные в этом году, с просторными санузлами и новой мебелью.  Поблизости расположены два пляжа. Первый в 5 минутах ходьбы. Лестница, насчитывающая около двухсот ступеней станет отличным ежедневным упражнением, но может быть препятствием для людей с ограниченными возможностями. Второй пляж несколько отдаленный, но очень просторный, находится в 12-ти минутах ходьбы.</p>
+        <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Поблизости от дома начинается сосновый бор - часть Сочинского Национального парка. Дом расположен на высоте 70 м над уровнем моря и из окон большинства номеров открывается чудесный вид на море.</p>
+        <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Неподалеку есть продуктовые магазины, кафе, недорогая столовая с домашней кухней. Остановка общественного транспорта находится в трех минутах ходьбы. До центра города 15-20 минут автобусом, аквапарк, дельфинарий – 10 минут.</p>
+    </section>
+    <section id="rooms">
+        <h2 class="text-secondary text-center">НОМЕРА</h2>
+        <div id="accordion">
+            <div class="card">
+                    <div class="card-body bg-light">
+                        <a class="card-link" data-toggle="collapse" href="#apartment">Апартаменты</button>
+                    </div>
+            </div> 
+            <div id="apartment" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src='Pictures/Appartment/1.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Appartment/2.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Appartment/3.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Appartment/4.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Appartment/5.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Appartment/6.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Appartment/7.jpg'></div>
+                    </div>
+                    <a class="carousel-control-prev" href="#apartment" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#apartment" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+            </div>
+            <div class="card">
+                <div class="card-body bg-light">
+                    <a class="card-link" data-toggle="collapse" href="#blockA">Двухкомнатный номер на третьем этаже "Сочи"</button>
+                </div>
+            </div> 
+            
+            <div id="blockA" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src='Pictures/Block A/1.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/2.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/3.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/4.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/5.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/6.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/7.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Block A/8.jpg'></div>
+                    </div>
+                    <a class="carousel-control-prev" href="#blockA" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#blockA" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+            </div> 
+            <div class="card">
+                    <div class="card-body bg-light">
+                        <a class="card-link" data-toggle="collapse" href="#blockB">Двухкомнатный номер на третьем этаже "Туапсе"</button>
+                    </div>
+                </div> 
+                <div id="blockB" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src='Pictures/Block B/0.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/1.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/3.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/4.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/5.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/6.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/7.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Block B/10.jpg'></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#blockB" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#blockB" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                </div> 
+
+                <div class="card">
+                        <div class="card-body bg-light">
+                            <a class="card-link" data-toggle="collapse" href="#three-person-2nd-floor">Трехместный номер на втором этаже</button>
+                        </div>
+                    </div> 
+                <div id="three-person-2nd-floor" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src='Pictures/Three-person second floor/019.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person second floor/020.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person second floor/021.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person second floor/030.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person second floor/031.jpg'></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#three-person-2nd-floor" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#three-person-2nd-floor" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                </div>  
+                
+                <div class="card">
+                        <div class="card-body bg-light">
+                            <a class="card-link" data-toggle="collapse" href="#three-person-1st-floor-sochi">Трехместный номер на первом этаже "Сочи"</button>
+                        </div>
+                    </div> 
+                <div id="three-person-1st-floor-sochi" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src='Pictures/Three-person first floor Sochi/018.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person first floor Sochi/021.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person first floor Sochi/022.jpg'></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#three-person-1st-floor-sochi" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#three-person-1st-floor-sochi" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                </div>  
+                
+                <div class="card">
+                        <div class="card-body bg-light">
+                            <a class="card-link" data-toggle="collapse" href="#three-person-1st-floor-tuapse">Трехместный номер на первом этаже "Туапсе"</button>
+                        </div>
+                    </div> 
+                <div id="three-person-1st-floor-tuapse" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src='Pictures/Three-person first floor Tuapse/018.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person first floor Tuapse/001 (2).jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person first floor Tuapse/019.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Three-person first floor Tuapse/020.jpg'></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#three-person-1st-floor-tuapse" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#three-person-1st-floor-tuapse" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                </div>  
+
+                <div class="card">
+                        <div class="card-body bg-light">
+                            <a class="card-link" data-toggle="collapse" href="#two-person-2nd-floor">Двухместный номер на втором этаже</button>
+                        </div>
+                    </div> 
+                <div id="two-person-2nd-floor" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src='Pictures/Two-person second floor/027.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Two-person second floor/029.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Two-person second floor/0299.jpg'></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#two-person-2nd-floor" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#two-person-2nd-floor" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body bg-light">
+                        <a class="card-link" data-toggle="collapse" href="#two-person-1st-floor">Двухместный номер на первом этаже</button>
+                    </div>
+                </div> 
+                <div id="two-person-1st-floor" class="carousel slide collapse" data-ride="carousel" data-parent="#accordion">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src='Pictures/Two-person first floor/024.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Two-person first floor/025.jpg'></div>
+                            <div class="carousel-item"><img src='Pictures/Two-person first floor/026.jpg'></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#two-person-1st-floor" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#two-person-1st-floor" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                </div>
+                 
+        </div>
+    </section>
+    <section id="our_photos">
+        <h2 class="text-secondary text-center" >ФОТОАЛЬБОМ</h2>
+        <div id="photoalbum" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src='Pictures/Photoalbum/0.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/1.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/2.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/3.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/4.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/6.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/7.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/8.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/Beach.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/Dino1.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/Dino2.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/Pool1.jpeg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/Pool2.jpeg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/Tvil.jpg'></div>
+                        <div class="carousel-item"><img src='Pictures/Photoalbum/view.jpg'></div>
+
+            </div>
+            <a class="carousel-control-prev" href="#photoalbum" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#photoalbum" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <div class="thumbcarousel d-none d-md-flex">
+            <div class="gallery">
+                <ul class="gallery_list">
+                    <li data-target="#photoalbum" data-slide-to="0" onclick="moveSlide(event)" class="active"><img src='Pictures/Photoalbum/0.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="1" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/1.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="2" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/2.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="3" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/3.JPG' ></li>
+                    <li data-target="#photoalbum" data-slide-to="4" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/4.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="5" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/6.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="6" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/7.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="7" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/8.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="8" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/Beach.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="9" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/Dino1.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="10" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/Dino2.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="11" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/Pool1.jpeg'></li>
+                    <li data-target="#photoalbum" data-slide-to="12" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/Pool2.jpeg'></li>
+                    <li data-target="#photoalbum" data-slide-to="13" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/Tvil.jpg'></li>
+                    <li data-target="#photoalbum" data-slide-to="14" onclick="moveSlide(event)"><img src='Pictures/Photoalbum/view.jpg'></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="feedback" class="feedback">
+        <h2 class="text-secondary text-center" >ОТЗЫВЫ</h2>
+        <blockquote class="blockquote">
+            <img src="Pictures/Feedback/Jane.JPG" alt="Отзыв Яны">
+            <p class="text-justify">Очень понравилось. Если вы хотите отдохнуть с семьёй и подальше от суеты вам сюда. Гостеприимные хозяева, уютные комнаты,чистота и порядок.Просьба только к отдыхающим, будьте аккуратней.Для вас стараются.</p>
+            <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+        </blockquote>
+        <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Tatyana Tolyati.JPG" alt="Отзыв Татьяны">
+                <p class="text-justify">Всё было супер,всё понравилось. Спасибо)</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+            </blockquote>
+        <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Oksana2.JPG" alt="Отзыв Оксаны">
+                <p class="text-justify">Спасибо большое хозяевам Галине и Тики, очень душевные люди, всегда готовые помочь. Жили в двухкомнатном номере на 3 этаже. Сам номер просторный, имеется с/узел, а также 2 больших балкона. Везде идеальная чистота. Питались в столовой у хозяев, все свежее и очень вкусное. До пляжа Дельфин пешком около 20 минут. На автобусе - 2 остановки. Отдохнули отлично, надеемся вернуться ещё раз.</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+        </blockquote>
+        <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Svetlana.JPG" alt="Отзыв Светланы">
+                <p class="text-justify">Понравилось все, чисто уютно хозяева добрые отзывчивые люди.</p>
+                <footer class="blockquote-footer"><a href="http://www.booking.com/Share-YDKXlA" target="_blank">booking.com</a></footer>
+        </blockquote>
+        <blockquote class="blockquote">
+                <img style="width:auto" src="Pictures/Feedback/Oksana Kuprina_VK.JPG" alt="Отзыв Оксаны">
+                <span>Оксана Куприна 10 ноября 2018</span>
+                <p class="text-justify">Отдыхали в Гостевом доме с 17.08.-28.08.18. семьёй из 4 человек (дети 11 и 16 лет). Проживали в 2-х комнатном номере на 3 этаже. В Лазаревском мы останавливаемся не первый раз, и это лучший номер, из всех, в которых мы жили. Фотографии номера полностью соответствуют действительности. Комнаты большие, из каждой выходят балконы. С балконов открывается прекрасный вид на море, которым мы наслаждались ежедневно во время завтрака и ужина. Территория дома чистая и ухоженная. Стоят столики, лежаки, есть небольшой бассейн и детская площадка. На втором этаже в холле есть стиральная машина, которой можно было пользоваться. При доме есть небольшое кафе с прекрасной домашней кухней. Повару Наталье - отдельное спасибо за все блюда, которые мы пробовали. Порции большие и цены приемлимые. Есть также отдельная кухня, для тех, кто хочет готовить сам. Трансфер с вокзала и на вокзал осуществляет на личном автомобиле хозяйка дома.</p>
+                <p class="text-justify">Уважаемые, Тики и Галина! Благодарим Вас за прекрасно созданные для отдыха условия, за Ваше радушие и гостеприимство. Тики - особая благодарность за шашлыки по-сербски, которые мы до сих пор вспоминаем, и вкуснейшее домашнее вино.</p>
+                <footer class="blockquote-footer"><a href="https://vk.com/topic-146739863_35849823" target="_blank">vk.com - Отдых в Лазаревском</a></footer>
+        </blockquote>         
+        
+        <div class="card">
+                <div class="card-body bg-light">
+                    <a class="card-link" data-toggle="collapse" href="#feedback-additional">Показать больше отзывов</button>
+                </div>
+        </div> 
+        <div class="collapse" id="feedback-additional">    
+            <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Tatyana.JPG" alt="Отзыв Татьяны">
+                <p class="text-justify">Отлично отдохнули. Все на высшем уровне. Очень вкусная домашняя кухня и главное недорого. Единственное - высоковато, но зато очень красивый вид с балкона. В первые дни было тяжеловато подниматься, а потом привыкли. Ходили на местный пляж, там очень чистая вода и мало людей, но каменистое дно. На соседнем пляже "Дельфин" очень весело, много развлечений, на дне мелкая галька, но уже и людей больше и вода грязнее. Туда мы ходили пешком заодно и гуляли, а обратно возвращались на автобусе или Галина забирала на машине. В общем, мы всем довольны! Спасибо большое всем, кто нам обеспечил этот замечательный отдых!</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Andrey.JPG" alt="Отзыв Андрея">
+                <p class="text-justify">Все было отлично, добродушные хозяева дома, все рассказали и показали, все соответствует описаниям. Замечательно отдохнули.</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Zulphira.JPG" alt="Отзыв Зульфиры">
+                <p class="text-justify">Все было замечательно!!! Гостеприимные хозяева, чистые апартаменты, все условия: кондиционер, холодильник, телевизор, чистое постельное белье, душ в любое время, и главное-питание!!! качественное, недорогое. вкусное!.... Поездки по Лазаревскому обеспечивала Галина- открытая, общительная, с хорошим чувством юмора дама!!!! Очаровал нас гостеприимством Тики. знакомил с поселком, историей, природой побережья. Мы ездили отдыхать ( без сравнения чего-то с чем-то и критики уровня комфорта)- и действительно. ОТДОХНУЛИ!!! Спасибо всем, кто был с нами!</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Elena.JPG" alt="Отзыв Елены">
+                <p class="text-justify">Нам очень понравился отдых. Хороший номер с современным ремонтом, со всеми удобствами. Вид из окна и с балкона - на море, просто шикарный! Ухоженная территория, всё чисто и аккуратно. В кафе-столовой кормят вкусно, разнообразно и сытно. Большое спасибо повару Наташе. Гостевой дом довольно удачно расположен, рядом сосновый лес, воздух чистый и вкусный, нет толпы народа как в центре. Подъем по лестнице с моря - хорошая тренировка, нас не сильно напрягал. И мышцы ног подкачали и не растолстели. До центра всего 5-10 минут на автобусе, а там магазинчики, ТЦ, кафешки и другие развлечения. Огромное спасибо Галине и Тики за радушный прием, доброжелательность, заботу и наш хороший отдых.</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <img src="Pictures/Feedback/Elizaveta.JPG" alt="Отзыв Елизаветы">
+                <p class="text-justify">Отличный дом за адекватную цену в тихом, спокойном месте Лазаревского. После многочасовых поисков в интернете остановили свой выбор на гостевом доме по адресу Краснодарский край, Сочи, Лазаревское, Новая. Внесли предоплату, уточнили время приезда и стали с трепетом ждать отпуска. Немного волновались, мало ли что. Но волнение улетучилось, после того как ступили на платформу и поняли, что действительно нас ждут ). Хозяйка Галина нас встретила у поезда и довезла до дома. Мы жили в Двухкомнатном номере на третьем этаже: Номер, Люкс, 7-местный. В номере две односпальные кровати и 2 двухспальные, кондиционер, телевизор, холодильник, шкаф для одежды, стол, чайник, балкон с видом а море. Также у нас был свой с/узел. Номер достаточно просторный.Все нереально чисто, в комнате ни пылинки. На первом этаже можно воспользоваться стиральной машинкой и утюгом. Хозяева оказались чудесными, добрыми, гостеприимными людьми, а как нас кормили, еда просто объедение. Хочется сказать огромное спасибо повару, всё было очень вкусно!!! На территории расположен бассейн, небольшая детская площадка и качели. Если вы захотите куда нибудь съездить (в центр, на пляж и т.д.) вас спокойно отвезут за небольшую плату всего за 10 рублей с человека. Гостевой дом я более чем рекомендую. Нам очень понравилось.</p>
+                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
+            </blockquote>    
+        
+            <p>Еще больше отзывов наших гостей на ресурсах бронирования:</p>
+            <ul> 
+                <li><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></li>
+                <li><a href="http://www.booking.com/Share-YDKXlA" target="_blank">booking.com</a></li>
+                <li><a href="https://vk.com/topic-146739863_35849823" target="_blank">vk.com - Отдых в Лазаревском</a></li>
+            </ul>
+            
+        </div>
+        
+    </section>
+    
+    <section id="contacts">
+        <h2 class="text-secondary text-center" >КОНТАКТЫ</h2>
+        <div class="card-deck w-100 mx-auto">
+                <div class="card" style="width:400px">
+                  <img class="card-img-top" src="Pictures/Contacts/Galina.JPG" alt="Фото Галины" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">Галина</h4>
+                    <p class="card-text">Телефон: +79184096445</p>
+                    <p class="card-text">email: gorbacheva_g@mail.ru</p>
+                    <a href="https://api.whatsapp.com/send?phone=79184096445" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
+                  </div>
+                </div>
+                <div class="card" style="width:400px">
+                        <img class="card-img-top" src="Pictures/Contacts/Regina.jpg" alt="Фото Регины" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">Регина</h4>
+                          <p class="card-text">Телефон: +79872525260</p>
+                            <p class="card-text">email: reginarus@ya.ru</p>
+                            <a href="https://api.whatsapp.com/send?phone=79872525260" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
+                        </div>
+                    </div>
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="Pictures/Contacts/Dmitry.jpg" alt="Фото Дмитрия" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Дмитрий</h4>
+                        <p class="card-text">Телефон: +79872467497</p>
+                        <p class="card-text">email:        DiReon16@gmail.com</p>
+                        <a href="https://api.whatsapp.com/send?phone=79872467497" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
+                    </div>
+                </div>
+        </div>
+        <p class="text-primary ml-5 p-3">Адрес: Лазаревское, ул. Новая, д.62</p>
+        <iframe class="iframe" src="https://yandex.ru/map-widget/v1/-/CCVFYCZt" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+    </section>
+
+
+   
+</body>
+       
+</html>
