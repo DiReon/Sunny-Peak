@@ -83,7 +83,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="150">
     <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top" style="margin-bottom: 50px">
         <div class="navbar-brand">"Солнечный Пик"</div>
-        <button class="navbar-toggler" type="button" data-target="#collapsibleNavbar" data-toggle="collapse">
+        <button class="navbar-toggler" type="button" aria-label="Close" data-target="#collapsibleNavbar" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="collapsibleNavbar" class="collapse navbar-collapse">
@@ -97,6 +97,17 @@
             </ul>
         </div>
     </nav>
+    <script>
+        $(document).ready(function(){
+          $("#collapsibleNavbar").on("show.bs.collapse", function(){
+            $(".navbar-toggler").html('<span aria-hidden="true">&times;</span>');
+          });
+          $("#collapsibleNavbar").on("hide.bs.collapse", function(){
+            $(".navbar-toggler").html('<span class="navbar-toggler-icon"></span>');
+          });
+        });
+        </script>
+        
     <div class="welcome-container">
             <h1 class="text-dark text-center align-vertically" id="h1">КОМФОРТНЫЙ ОТДЫХ У МОРЯ</h1>
             <img class="img-fluid" style="margin: -10% 0 -30% 0" src="Pictures/view.jpg" alt="Вид на море">           
