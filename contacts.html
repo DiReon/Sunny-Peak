@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечный Пик - контакты</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+        }
+        #contacts {
+            background-image: url("Pictures/map1.JPG")
+        }
+        .rounded-circle {
+            height: 150px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top" style="margin-bottom: 50px">
+            <div class="navbar-brand">"Солнечный Пик"</div>
+            <button class="navbar-toggler" type="button" aria-label="Close" data-target="#collapsibleNavbar" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="collapsibleNavbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav w-75">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about_us">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#rooms">Номера</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#our_photos">Фотоальбом</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feedback">Отзывы</a></li>
+                    <li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li>
+    
+                </ul>
+            </div>
+        </nav>
+        <script>
+            $(document).ready(function(){
+                $("#collapsibleNavbar").on("show.bs.collapse", function(){
+                $(".navbar-toggler").html('<span aria-hidden="true">&times;</span>');
+                });
+                $("#collapsibleNavbar").on("hide.bs.collapse", function(){
+                $(".navbar-toggler").html('<span class="navbar-toggler-icon"></span>');
+                });
+            });
+            </script>
+    <section id="contacts">
+        <h2 class="text-secondary text-center pb-5" >КОНТАКТЫ</h2>
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3 ml-3">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img class="rounded-circle" src="Pictures/Contacts/Galina.JPG" alt="Фото Галины">
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>Галина</h4>
+                            <p>Телефон: +79184096445</p>
+                            <p>email: gorbacheva_g@mail.ru</p>
+                            <a href="https://api.whatsapp.com/send?phone=79184096445" class="btn btn-success" target="_blank">Написать в WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 ml-3">    
+                    <div class="row">
+                            <div class="col-sm-3">
+                                <img class="rounded-circle" src="Pictures/Contacts/Regina.jpg" alt="Фото Регины">
+                            </div>
+                            <div class="col-sm-9">
+                                <h4>Регина</h4>
+                                <p>Телефон: +79872525260</p>
+                                    <p>email: reginarus@ya.ru</p>
+                                    <a href="https://api.whatsapp.com/send?phone=79872525260" class="btn btn-success" target="_blank">Написать в WhatsApp</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="card mb-3 ml-3">
+                    <div class="row" style="height: 200px">
+                        <div class="col-sm-3">
+                            <img class="rounded-circle" src="Pictures/Contacts/Dmitry.jpg" alt="Фото Дмитрия">
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>Дмитрий</h4>
+                            <p>Телефон: +79872467497</p>
+                            <p>email: DiReon16@gmail.com</p>
+                            <a href="https://api.whatsapp.com/send?phone=79872467497" class="btn btn-success" target="_blank">Написать в WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <p class="text-primary ml-5 pb-1">Адрес: Лазаревское, ул. Новая, д.62</p>
+                <iframe class="iframe" src="https://yandex.ru/map-widget/v1/-/CCVFYCZt" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+                <p class="text-primary ml-5">А также:
+                    <ul> 
+                        <li><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></li>
+                        <li><a href="http://www.booking.com/Share-YDKXlA" target="_blank">Booking.com</a></li>
+                        <li><a href="https://vk.com/topic-146739863_35849823" target="_blank">vk.com - Отдых в Лазаревском</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>    
+            
+    </section>
+</body>
+</html>

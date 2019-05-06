@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гостевой Дом "Солнечный Пик"</title>
+    <link rel="shortcut icon" href="Pictures/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -23,7 +24,6 @@
             box-sizing: border-box;
         }
         body {
-            height: 3000px;
             position:relative;
         }
         .carousel-inner img {
@@ -87,12 +87,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="collapsibleNavbar" class="collapse navbar-collapse">
-            <ul class="navbar-nav w-75" >
+            <ul class="navbar-nav w-75">
                 <li class="nav-item"><a class="nav-link" href="#about_us">О нас</a></li>
                 <li class="nav-item"><a class="nav-link" href="#rooms">Номера</a></li>
                 <li class="nav-item"><a class="nav-link" href="#our_photos">Фотоальбом</a></li>
                 <li class="nav-item"><a class="nav-link" href="#feedback">Отзывы</a></li>
-                <li class="nav-item"><a class="nav-link"  href="#contacts">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li>
 
             </ul>
         </div>
@@ -415,41 +415,36 @@
         
     </section>
     
-    <section id="contacts">
+    <section id="contacts" style="width: 50%; margin:auto">
         <h2 class="text-secondary text-center pb-5" >КОНТАКТЫ</h2>
-        <div class="card-deck w-100 mx-auto">
-            <div class="card" style="width:200px">
-              <img class="card-img-top" src="Pictures/Contacts/Galina.JPG" alt="Фото Галины" style="width:100%">
-              <div class="card-body">
-                <h4 class="card-title">Галина</h4>
-                <p class="card-text">Телефон: +79184096445</p>
-                <p class="card-text">email: gorbacheva_g@mail.ru</p>
-                <a href="https://api.whatsapp.com/send?phone=79184096445" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
-              </div>
-            </div>
-            <div class="card" style="width:200px">
-                    <img class="card-img-top" src="Pictures/Contacts/Regina.jpg" alt="Фото Регины" style="width:100%">
-                    <div class="card-body">
-                      <h4 class="card-title">Регина</h4>
-                      <p class="card-text">Телефон: +79872525260</p>
-                        <p class="card-text">email: reginarus@ya.ru</p>
-                        <a href="https://api.whatsapp.com/send?phone=79872525260" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
-                    </div>
+        <div class="card rounded">
+            <div class="row">
+                <div class="col">    
+                    <h4>Регина</h4>
+                    <p>Телефон: +79872525260</p>
+                    <p>email: reginarus@ya.ru</p>
+                    <a href="https://api.whatsapp.com/send?phone=79872525260" class="btn btn-success" target="_blank">Написать в WhatsApp</a>
                 </div>
-            <div class="card" style="width:200px">
-                <img class="card-img-top" src="Pictures/Contacts/Dmitry.jpg" alt="Фото Дмитрия" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Дмитрий</h4>
-                    <p class="card-text">Телефон: +79872467497</p>
-                    <p class="card-text">email:        DiReon16@gmail.com</p>
-                    <a href="https://api.whatsapp.com/send?phone=79872467497" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
+                <div class="col">
+                    <h4>Галина</h4>
+                    <p>Телефон: +79184096445</p>
+                    <p>email: gorbacheva_g@mail.ru</p>
+                    <a href="https://api.whatsapp.com/send?phone=79184096445" class="btn btn-success" target="_blank">Написать в WhatsApp</a>
+                </div>
+                <div class="col">
+                    <h4>Дмитрий</h4>
+                    <p>Телефон: +79872467497</p>
+                    <p>email: DiReon16@gmail.com</p>
+                    <a href="https://api.whatsapp.com/send?phone=79872467497" class="btn btn-success" target="_blank">Написать в WhatsApp</a>
                 </div>
             </div>
-    </div>
-    <p class="text-primary ml-5 p-3">Адрес: Лазаревское, ул. Новая, д.62</p>
-    <iframe class="iframe" src="https://yandex.ru/map-widget/v1/-/CCVFYCZt" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
-    </section>
-
+            <p class="text-primary ml-5 p-3">Адрес: Лазаревское, ул. Новая, д.62</p>
+        </div>
+            
+        <button class="btn btn-info m-3">
+            <a class="text-white" href="contacts.html" target="_blank">Подробнее...</a>
+        </button>
+</section>
 
    
 </body>
