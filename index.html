@@ -46,11 +46,17 @@
             transform: translate(-50%, -50%);
         }
         .welcome-container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             position: relative;
-            text-align: center;
-            color: white;
-            overflow:hidden; 
-            margin: 50px 0 0 0;
+            overflow: hidden;
+        }
+        #welcome-background {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: -20%;
+            
         }
         .carousel, .iframe {
             width: 50%; 
@@ -78,6 +84,12 @@
         .rounded-circle {
             height: 125px;
             width: auto;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .tick li:before {
+            content: '✓';
         }
         @media screen and (max-width: 600px) {
             h1, h2 {
@@ -127,8 +139,9 @@
     </script>
         
     <div class="welcome-container">
-            <h1 class="text-dark text-center align-vertically" id="h1">КОМФОРТНЫЙ ОТДЫХ У МОРЯ</h1>
-            <img class="img-fluid" style="margin: -10% 0 -30% 0" src="Pictures/view.jpg" alt="Вид на море">           
+            <video autoplay loop muted id="welcome-background">
+                    <source src="video-welcome.mp4" type='video/mp4'/>
+            </video>    
     </div>
     <section class="justify-content-center" id="about_us">
         <h2 class="text-secondary text-center">О НАС</h2>
@@ -166,6 +179,27 @@
                     <a class="carousel-control-next" href="#apartment" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                <caption>Шикарный двухкомнатный номер на 4-5 человек с кухней и видом на море
+                        <a class="link link-info" data-toggle="collapse" href="#apartament-additional">Подробнее о номере...</a>
+                </caption>    
+                <ul id="apartament-additional" class="collapse tick">В номере:
+                        <li>Санузел (душ и туалет)</li>
+                        <li>Полноценная кухня</li>
+                        <li>Просторный балкон с видом на море</li>
+                        <li>Небольшой балкончик в комнате с кухней</li>
+                        <li>Широкая комфортная кровать (160 см)</li>
+                        <li>Двуспальный диван</li>
+                        <li>Стол со стульями</li>
+                        <li>Сушилка для одежды</li>
+                        <li>Кондиционер</li>
+                        <li>Телевизор с плоским экраном</li>
+                        <li>Чайник</li>
+                        <li>Микроволновая печь</li>
+                        <li>Полотенца</li>
+                        <li>Шкаф</li>
+                        <li>Интернет Wi-Fi</li>
+                    </ul>
+            
             </div>
             <div class="card">
                 <div class="card-body bg-light">
