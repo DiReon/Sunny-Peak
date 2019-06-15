@@ -33,6 +33,13 @@
         }
         body {
             position:relative;
+            background-color: rgb(223, 221, 221);
+
+        }
+        section {
+            background-color: white;
+            margin: 5px;
+            padding: 5px;
         }
         .carousel-inner img {
             width: 100%;
@@ -111,7 +118,7 @@
     <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top" style="margin-bottom: 50px; width: 100%">
         <div class="navbar-brand">
             "Солнечный Пик"
-            <a class='link text-white' href="tel: +7-987-252-5260" style="font-size: 1rem">+7-987-252-52-60</a>
+            <a class='link text-white' href="tel: +7-987-252-5260" style="font-size: 0.8rem">+7-987-252-52-60</a>
         </div>
         <button class="navbar-toggler" type="button" aria-label="Close" data-target="#collapsibleNavbar" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
@@ -149,19 +156,20 @@
                     <source src="video-welcome.mp4" type='video/mp4'/>
             </video>    
     </div>
-    <section class="justify-content-center" id="about_us">
+    <section class="justify-content-center text-center" id="about_us">
         <h2 class="text-secondary text-center">О НАС</h2>
         <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Гостевой дом «Солнечный Пик» расположен в тихом уголке поселка Лазаревское, вдали от шумной трассы и городской суеты. Гостей ждут светлые чистые комнаты, с просторными санузлами и свежей мебелью...  
-            <a class="link link-info" data-toggle="collapse" href="#about_us-additional">Подробнее...</a></p>
+        </p>    
+        <a class="btn btn-secondary" data-toggle="collapse" href="#about_us-additional" >Подробнее</a>
          
         <div class="collapse" id="about_us-additional">
             <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Поблизости расположены два пляжа. Первый в 5 минутах ходьбы. Лестница, насчитывающая около двухсот ступеней станет отличным ежедневным упражнением, но может быть препятствием для людей с ограниченными возможностями. Второй пляж несколько отдаленный, но очень просторный, находится в 12-ти минутах ходьбы.</p>
             <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Поблизости от дома начинается сосновый бор - часть Сочинского Национального парка. Дом расположен на высоте 70 м над уровнем моря и из окон большинства номеров открывается чудесный вид на море.</p>
             <p class="text-dark text-justify" style="width: 80%; margin: 1rem auto">Неподалеку есть продуктовые магазины, кафе, недорогая столовая с домашней кухней. Остановка общественного транспорта находится в трех минутах ходьбы. До центра города 15-20 минут автобусом, аквапарк, дельфинарий – 10 минут.</p>
-            <a class="link link-info" data-toggle="collapse" href="#about_us-additional">Свернуть</a></p>
+            <a class="btn btn-secondary" data-toggle="collapse" href="#about_us-additional">Свернуть</a></p>
         </div>
     </section>
-    <section id="rooms">
+    <section id="rooms" class="text-center">
         <h2 class="text-secondary text-center">НОМЕРА</h2>
         <div id="accordion">
             <div class="card">
@@ -188,7 +196,7 @@
                     </a>
                 </div> 
                 <div class="text-center">Шикарный двухкомнатный номер на 4-5 человек с кухней и видом на море
-                        <a class="link link-info" data-toggle="collapse" href="#apartment-additional">Подробнее о номере...</a>
+                        <a class="btn btn-secondary" data-toggle="collapse" href="#apartment-additional">Подробнее о номере...</a>
                 </div>    
                 <ul id="apartment-additional" class="collapse tick" style="width:90%; margin: auto">В номере:
                         <li>Санузел (душ и туалет)</li>
@@ -239,7 +247,7 @@
                     </a>
                 </div>
                     <div class="text-center">Просторный двухкомнатный номер на 5-7 человек с видом на море
-                        <a class="link link-info" data-toggle="collapse" href="#blockA-additional">Подробнее о номере...</a>
+                        <a class="btn btn-secondary" data-toggle="collapse" href="#blockA-additional">Подробнее о номере...</a>
                     </div>    
                     <ul id="blockA-additional" class="collapse tick w-50" style="margin: auto">В номере:
                             <li>Санузел (душ и туалет)</li>
@@ -283,7 +291,7 @@
                         </a>
                 </div>
                 <div class="text-center">Просторный двухкомнатный номер на 5-7 человек с видом на море
-                    <a class="link link-info" data-toggle="collapse" href="#blockB-additional">Подробнее о номере...</a>
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#blockB-additional">Подробнее о номере...</a>
                 </div>    
                 <ul id="blockB-additional" class="collapse tick w-50" style="margin: auto">В номере:
                         <li>Санузел (ванна и туалет)</li>
@@ -325,7 +333,7 @@
                     </a>
                 </div>  
                 <div class="text-center">Трехместный номер на 3-4 человека с балконом и видом на море
-                    <a class="link link-info" data-toggle="collapse" href="#room4-additional">Подробнее о номере...</a>
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#room4-additional">Подробнее о номере...</a>
                 </div>    
                     <ul id="room4-additional" class="collapse tick w-50" style="margin: auto">В номере:
                         <li>Санузел (душ и туалет)</li>
@@ -364,7 +372,7 @@
                         </a>
                 </div>  
                 <div class="text-center">Трехместный номер на 3-4 человека на первом этаже с выходом на террасу
-                    <a class="link link-info" data-toggle="collapse" href="#room2-additional">Подробнее о номере...</a>
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#room2-additional">Подробнее о номере...</a>
                 </div>    
                     <ul id="room2-additional" class="collapse tick w-50" style="margin: auto">В номере:
                         <li>Санузел (душ и туалет)</li>
@@ -402,7 +410,7 @@
                     </a>
                 </div>  
                 <div class="text-center">Трехместный номер на 3-4 человека на первом этаже с выходом на террасу
-                    <a class="link link-info" data-toggle="collapse" href="#room1-additional">Подробнее о номере...</a>
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#room1-additional">Подробнее о номере...</a>
                 </div>    
                 <ul id="room1-additional" class="collapse tick w-50" style="margin: auto">В номере:
                     <li>Санузел (душ и туалет)</li>
@@ -439,7 +447,7 @@
                     </a>
                </div>
                <div class="text-center">Двухместный номер на 2-3 человека на втором этаже с небольшим балконом
-                    <a class="link link-info" data-toggle="collapse" href="#room5-additional">Подробнее о номере...</a>
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#room5-additional">Подробнее о номере...</a>
                 </div>    
                 <ul id="room5-additional" class="collapse tick w-50" style="margin: auto">В номере:
                     <li>Санузел (ванна и туалет)</li>
@@ -475,7 +483,7 @@
                     </a>
                 </div>
                 <div class="text-center">Двухместный номер на 2-3 человека на первом этаже
-                    <a class="link link-info" data-toggle="collapse" href="#room3-additional">Подробнее о номере...</a>
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#room3-additional">Подробнее о номере...</a>
                 </div>    
                 <ul id="room3-additional" class="collapse tick w-50" style="margin: auto">В номере:
                     <li>Санузел (душ и туалет)</li>
@@ -545,16 +553,16 @@
     </section>
     <section id="feedback" class="feedback">
         <h2 class="text-secondary text-center" >ОТЗЫВЫ</h2>
-        <blockquote class="blockquote">
+        <div>
                 <img src="Pictures/Feedback/Tatyana Tolyati.JPG" alt="Отзыв Татьяны">
                 <p class="text-justify">Всё было супер,всё понравилось. Спасибо)</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-        </blockquote>
-        <blockquote class="blockquote">
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+        </div>
+        <div>
             <img src="Pictures/Feedback/Oksana2.JPG" alt="Отзыв Оксаны">
             <p class="text-justify">Спасибо большое хозяевам Галине и Тики, очень душевные люди, всегда готовые помочь. Жили в двухкомнатном номере на 3 этаже. Сам номер просторный, имеется с/узел, а также 2 больших балкона. Везде идеальная чистота. Питались в столовой у хозяев, все свежее и очень вкусное. До пляжа Дельфин пешком около 20 минут. На автобусе - 2 остановки. Отдохнули отлично, надеемся вернуться ещё раз.</p>
-            <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-        </blockquote>
+            <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+        </div>
 
         <div class="card">
             <div class="card-body bg-light">
@@ -564,51 +572,51 @@
     
         <div class="collapse" id="feedback-additional">
 
-            <blockquote class="blockquote">
+            <div>
                 <img src="Pictures/Feedback/Jane.JPG" alt="Отзыв Яны">
                 <p class="text-justify">Очень понравилось. Если вы хотите отдохнуть с семьёй и подальше от суеты вам сюда. Гостеприимные хозяева, уютные комнаты,чистота и порядок.Просьба только к отдыхающим, будьте аккуратней.Для вас стараются.</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-            </blockquote>
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+            </div>
         
             
-            <blockquote class="blockquote">
+            <div>
                     <img src="Pictures/Feedback/Svetlana.JPG" alt="Отзыв Светланы">
                     <p class="text-justify">Понравилось все, чисто уютно хозяева добрые отзывчивые люди.</p>
-                    <footer class="blockquote-footer"><a href="http://www.booking.com/Share-YDKXlA" target="_blank">booking.com</a></footer>
-            </blockquote>
-            <blockquote class="blockquote">
+                    <footer ><a href="http://www.booking.com/Share-YDKXlA" target="_blank">- booking.com</a></footer>
+            </div>
+            <div>
                     <img style="width:auto" src="Pictures/Feedback/Oksana Kuprina_VK.JPG" alt="Отзыв Оксаны">
                     <span>Оксана Куприна 10 ноября 2018</span>
                     <p class="text-justify">Отдыхали в Гостевом доме с 17.08.-28.08.18. семьёй из 4 человек (дети 11 и 16 лет). Проживали в 2-х комнатном номере на 3 этаже. В Лазаревском мы останавливаемся не первый раз, и это лучший номер, из всех, в которых мы жили. Фотографии номера полностью соответствуют действительности. Комнаты большие, из каждой выходят балконы. С балконов открывается прекрасный вид на море, которым мы наслаждались ежедневно во время завтрака и ужина. Территория дома чистая и ухоженная. Стоят столики, лежаки, есть небольшой бассейн и детская площадка. На втором этаже в холле есть стиральная машина, которой можно было пользоваться. При доме есть небольшое кафе с прекрасной домашней кухней. Повару Наталье - отдельное спасибо за все блюда, которые мы пробовали. Порции большие и цены приемлимые. Есть также отдельная кухня, для тех, кто хочет готовить сам. Трансфер с вокзала и на вокзал осуществляет на личном автомобиле хозяйка дома.</p>
                     <p class="text-justify">Уважаемые, Тики и Галина! Благодарим Вас за прекрасно созданные для отдыха условия, за Ваше радушие и гостеприимство. Тики - особая благодарность за шашлыки по-сербски, которые мы до сих пор вспоминаем, и вкуснейшее домашнее вино.</p>
-                    <footer class="blockquote-footer"><a href="https://vk.com/topic-146739863_35849823" target="_blank">vk.com - Отдых в Лазаревском</a></footer>
-            </blockquote>         
+                    <footer ><a href="https://vk.com/topic-146739863_35849823" target="_blank">- vk.com - Отдых в Лазаревском</a></footer>
+            </div>         
             
-            <blockquote class="blockquote">
+            <div>
                 <img src="Pictures/Feedback/Tatyana.JPG" alt="Отзыв Татьяны">
                 <p class="text-justify">Отлично отдохнули. Все на высшем уровне. Очень вкусная домашняя кухня и главное недорого. Единственное - высоковато, но зато очень красивый вид с балкона. В первые дни было тяжеловато подниматься, а потом привыкли. Ходили на местный пляж, там очень чистая вода и мало людей, но каменистое дно. На соседнем пляже "Дельфин" очень весело, много развлечений, на дне мелкая галька, но уже и людей больше и вода грязнее. Туда мы ходили пешком заодно и гуляли, а обратно возвращались на автобусе или Галина забирала на машине. В общем, мы всем довольны! Спасибо большое всем, кто нам обеспечил этот замечательный отдых!</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-            </blockquote>
-            <blockquote class="blockquote">
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+            </div>
+            <div>
                 <img src="Pictures/Feedback/Andrey.JPG" alt="Отзыв Андрея">
                 <p class="text-justify">Все было отлично, добродушные хозяева дома, все рассказали и показали, все соответствует описаниям. Замечательно отдохнули.</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-            </blockquote>
-            <blockquote class="blockquote">
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+            </div>
+            <div>
                 <img src="Pictures/Feedback/Zulphira.JPG" alt="Отзыв Зульфиры">
                 <p class="text-justify">Все было замечательно!!! Гостеприимные хозяева, чистые апартаменты, все условия: кондиционер, холодильник, телевизор, чистое постельное белье, душ в любое время, и главное-питание!!! качественное, недорогое. вкусное!.... Поездки по Лазаревскому обеспечивала Галина- открытая, общительная, с хорошим чувством юмора дама!!!! Очаровал нас гостеприимством Тики. знакомил с поселком, историей, природой побережья. Мы ездили отдыхать ( без сравнения чего-то с чем-то и критики уровня комфорта)- и действительно. ОТДОХНУЛИ!!! Спасибо всем, кто был с нами!</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-            </blockquote>
-            <blockquote class="blockquote">
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+            </div>
+            <div>
                 <img src="Pictures/Feedback/Elena.JPG" alt="Отзыв Елены">
                 <p class="text-justify">Нам очень понравился отдых. Хороший номер с современным ремонтом, со всеми удобствами. Вид из окна и с балкона - на море, просто шикарный! Ухоженная территория, всё чисто и аккуратно. В кафе-столовой кормят вкусно, разнообразно и сытно. Большое спасибо повару Наташе. Гостевой дом довольно удачно расположен, рядом сосновый лес, воздух чистый и вкусный, нет толпы народа как в центре. Подъем по лестнице с моря - хорошая тренировка, нас не сильно напрягал. И мышцы ног подкачали и не растолстели. До центра всего 5-10 минут на автобусе, а там магазинчики, ТЦ, кафешки и другие развлечения. Огромное спасибо Галине и Тики за радушный прием, доброжелательность, заботу и наш хороший отдых.</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-            </blockquote>
-            <blockquote class="blockquote">
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+            </div>
+            <div>
                 <img src="Pictures/Feedback/Elizaveta.JPG" alt="Отзыв Елизаветы">
-                <p class="text-justify">Отличный дом за адекватную цену в тихом, спокойном месте Лазаревского. После многочасовых поисков в интернете остановили свой выбор на гостевом доме по адресу Краснодарский край, Сочи, Лазаревское, Новая. Внесли предоплату, уточнили время приезда и стали с трепетом ждать отпуска. Немного волновались, мало ли что. Но волнение улетучилось, после того как ступили на платформу и поняли, что действительно нас ждут ). Хозяйка Галина нас встретила у поезда и довезла до дома. Мы жили в Двухкомнатном номере на третьем этаже: Номер, Люкс, 7-местный. В номере две односпальные кровати и 2 двухспальные, кондиционер, телевизор, холодильник, шкаф для одежды, стол, чайник, балкон с видом а море. Также у нас был свой с/узел. Номер достаточно просторный.Все нереально чисто, в комнате ни пылинки. На первом этаже можно воспользоваться стиральной машинкой и утюгом. Хозяева оказались чудесными, добрыми, гостеприимными людьми, а как нас кормили, еда просто объедение. Хочется сказать огромное спасибо повару, всё было очень вкусно!!! На территории расположен бассейн, небольшая детская площадка и качели. Если вы захотите куда нибудь съездить (в центр, на пляж и т.д.) вас спокойно отвезут за небольшую плату всего за 10 рублей с человека. Гостевой дом я более чем рекомендую. Нам очень понравилось.</p>
-                <footer class="blockquote-footer"><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">TVIL.ru</a></footer>
-            </blockquote>    
+                <p>Отличный дом за адекватную цену в тихом, спокойном месте Лазаревского. После многочасовых поисков в интернете остановили свой выбор на гостевом доме по адресу Краснодарский край, Сочи, Лазаревское, Новая. Внесли предоплату, уточнили время приезда и стали с трепетом ждать отпуска. Немного волновались, мало ли что. Но волнение улетучилось, после того как ступили на платформу и поняли, что действительно нас ждут ). Хозяйка Галина нас встретила у поезда и довезла до дома. Мы жили в Двухкомнатном номере на третьем этаже: Номер, Люкс, 7-местный. В номере две односпальные кровати и 2 двухспальные, кондиционер, телевизор, холодильник, шкаф для одежды, стол, чайник, балкон с видом а море. Также у нас был свой с/узел. Номер достаточно просторный.Все нереально чисто, в комнате ни пылинки. На первом этаже можно воспользоваться стиральной машинкой и утюгом. Хозяева оказались чудесными, добрыми, гостеприимными людьми, а как нас кормили, еда просто объедение. Хочется сказать огромное спасибо повару, всё было очень вкусно!!! На территории расположен бассейн, небольшая детская площадка и качели. Если вы захотите куда нибудь съездить (в центр, на пляж и т.д.) вас спокойно отвезут за небольшую плату всего за 10 рублей с человека. Гостевой дом я более чем рекомендую. Нам очень понравилось.</p>
+                <footer ><a href="https://tvil.ru/city/lazarevskoe/hotels/592589/" target="_blank">- TVIL.ru</a></footer>
+            </div>    
         
             <p>Еще больше отзывов наших гостей на ресурсах бронирования:</p>
             <ul> 
