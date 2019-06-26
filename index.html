@@ -95,14 +95,18 @@
         ul {
             list-style-type: none;
         }
+        .tick {
+            width: 50%;
+        }
         .tick li:before {
             content: '✓';
         }
+      
         @media screen and (max-width: 600px) {
             h1, h2 {
                 font-size: 1rem;
             }
-            .carousel, .thumbcarousel, .feedback, .iframe, #contacts {
+            .carousel, .thumbcarousel, .feedback, .iframe, .tick, #contacts {
                 width: 90%;
             }
             #welcome-background {
@@ -116,7 +120,7 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="150">
     <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top" style="margin-bottom: 50px; width: 100%">
-        <div class="navbar-brand">
+        <div class="text-white">
             "Солнечный Пик"
             <a class='link text-white' href="tel: +7-987-252-5260" style="font-size: 0.8rem">+7-987-252-52-60</a>
         </div>
@@ -169,7 +173,7 @@
             <a class="btn btn-secondary" data-toggle="collapse" href="#about_us-additional">Свернуть</a></p>
         </div>
     </section>
-    <section id="rooms" class="text-center">
+    <section id="rooms">
         <h2 class="text-secondary text-center">НОМЕРА</h2>
         <div id="accordion">
             <div class="card">
@@ -195,10 +199,9 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div> 
-                <div class="text-center">Шикарный двухкомнатный номер на 4-5 человек с кухней и видом на море
-                        <a class="btn btn-secondary" data-toggle="collapse" href="#apartment-additional">Подробнее о номере...</a>
-                </div>    
-                <ul id="apartment-additional" class="collapse tick" style="width:90%; margin: auto">В номере:
+                <div class="text-center">Шикарный двухкомнатный номер на 4-5 человек с кухней и видом на море</div>  
+                <a class="btn btn-secondary" data-toggle="collapse" href="#apartment-additional">Подробнее о номере...</a>  
+                <ul id="apartment-additional" class="collapse tick" style="margin: auto">В номере:
                         <li>Санузел (душ и туалет)</li>
                         <li>Полноценная кухня</li>
                         <li>Просторный балкон с видом на море</li>
@@ -246,10 +249,10 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>
-                    <div class="text-center">Просторный двухкомнатный номер на 5-7 человек с видом на море
-                        <a class="btn btn-secondary" data-toggle="collapse" href="#blockA-additional">Подробнее о номере...</a>
-                    </div>    
-                    <ul id="blockA-additional" class="collapse tick w-50" style="margin: auto">В номере:
+                    <div class="text-center">Просторный двухкомнатный номер на 5-7 человек с видом на море</div>    
+                    <a class="btn btn-secondary" data-toggle="collapse" href="#blockA-additional">Подробнее о номере...</a>
+
+                    <ul id="blockA-additional" class="collapse tick" style="margin: auto">В номере:
                             <li>Санузел (душ и туалет)</li>
                             <li>Просторный балкон с видом на море - в каждой комнате</li>
                             <li>Две двуспальные кровати (140 см)</li>
@@ -290,10 +293,10 @@
                             <span class="carousel-control-next-icon"></span>
                         </a>
                 </div>
-                <div class="text-center">Просторный двухкомнатный номер на 5-7 человек с видом на море
-                    <a class="btn btn-secondary" data-toggle="collapse" href="#blockB-additional">Подробнее о номере...</a>
-                </div>    
-                <ul id="blockB-additional" class="collapse tick w-50" style="margin: auto">В номере:
+                <div class="text-center">Просторный двухкомнатный номер на 5-7 человек с видом на море</div>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#blockB-additional">Подробнее о номере...</a>
+
+                <ul id="blockB-additional" class="collapse tick" style="margin: auto">В номере:
                         <li>Санузел (ванна и туалет)</li>
                         <li>Просторный балкон с видом на море - в каждой комнате</li>
                         <li>Две двуспальные кровати (140 см)</li>
@@ -332,10 +335,10 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>  
-                <div class="text-center">Трехместный номер на 3-4 человека с балконом и видом на море
-                    <a class="btn btn-secondary" data-toggle="collapse" href="#room4-additional">Подробнее о номере...</a>
-                </div>    
-                    <ul id="room4-additional" class="collapse tick w-50" style="margin: auto">В номере:
+                <div class="text-center">Трехместный номер на 3-4 человека с балконом и видом на море</div>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#room4-additional">Подробнее о номере...</a>
+
+                <ul id="room4-additional" class="collapse tick" style="margin: auto">В номере:
                         <li>Санузел (душ и туалет)</li>
                         <li>Просторный балкон с видом на море</li>
                         <li>Двуспальная кровать (140 см)</li>
@@ -371,10 +374,10 @@
                             <span class="carousel-control-next-icon"></span>
                         </a>
                 </div>  
-                <div class="text-center">Трехместный номер на 3-4 человека на первом этаже с выходом на террасу
-                    <a class="btn btn-secondary" data-toggle="collapse" href="#room2-additional">Подробнее о номере...</a>
-                </div>    
-                    <ul id="room2-additional" class="collapse tick w-50" style="margin: auto">В номере:
+                <div class="text-center">Трехместный номер на 3-4 человека на первом этаже с выходом на террасу</div>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#room2-additional">Подробнее о номере...</a>
+
+                <ul id="room2-additional" class="collapse tick" style="margin: auto">В номере:
                         <li>Санузел (душ и туалет)</li>
                         <li>Двуспальная кровать (140 см)</li>
                         <li>Односпальная кровать</li>
@@ -409,10 +412,10 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>  
-                <div class="text-center">Трехместный номер на 3-4 человека на первом этаже с выходом на террасу
-                    <a class="btn btn-secondary" data-toggle="collapse" href="#room1-additional">Подробнее о номере...</a>
-                </div>    
-                <ul id="room1-additional" class="collapse tick w-50" style="margin: auto">В номере:
+                <div class="text-center">Трехместный номер на 3-4 человека на первом этаже с выходом на террасу</div>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#room1-additional">Подробнее о номере...</a>
+
+                <ul id="room1-additional" class="collapse tick" style="margin: auto">В номере:
                     <li>Санузел (душ и туалет)</li>
                     <li>Двуспальная кровать (140 см)</li>
                     <li>Односпальная кровать</li>
@@ -446,10 +449,10 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                </div>
-               <div class="text-center">Двухместный номер на 2-3 человека на втором этаже с небольшим балконом
-                    <a class="btn btn-secondary" data-toggle="collapse" href="#room5-additional">Подробнее о номере...</a>
-                </div>    
-                <ul id="room5-additional" class="collapse tick w-50" style="margin: auto">В номере:
+               <div class="text-center">Двухместный номер на 2-3 человека на втором этаже с небольшим балконом</div>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#room5-additional">Подробнее о номере...</a>
+
+                <ul id="room5-additional" class="collapse tick" style="margin: auto">В номере:
                     <li>Санузел (ванна и туалет)</li>
                     <li>Двуспальная кровать (140 см)</li>
                     <li>Сушилка для одежды</li>
@@ -482,10 +485,10 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>
-                <div class="text-center">Двухместный номер на 2-3 человека на первом этаже
-                    <a class="btn btn-secondary" data-toggle="collapse" href="#room3-additional">Подробнее о номере...</a>
-                </div>    
-                <ul id="room3-additional" class="collapse tick w-50" style="margin: auto">В номере:
+                <div class="text-center">Двухместный номер на 2-3 человека на первом этаже</div>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#room3-additional">Подробнее о номере...</a>
+
+                <ul id="room3-additional" class="collapse tick" style="margin: auto">В номере:
                     <li>Санузел (душ и туалет)</li>
                     <li>Двуспальная кровать (140 см)</li>
                     <li>Односпальная кровать</li>
@@ -678,7 +681,8 @@
         </div>
 </section>
 
-   
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhw9tmoWdZDVOD3LLKQ8PbE-mfBTreXOr-pbBAaJZo5Ghqgg/viewform?embedded=true" width="640" height="839" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+
 </body>
        
 </html>
