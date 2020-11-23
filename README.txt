@@ -1,1 +1,1 @@
-This is project for training BS4 and JS skills and also a public website for guesthouse in Sochi
+This is project for training BS4 and JS skills
