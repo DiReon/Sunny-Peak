@@ -1,31 +1,4 @@
-const prices = {
-    Двухместный: [
-            {
-                start: '2023-06-01',
-                end: '2023-06-15',
-                price: {
-                    '2': 1500,
-                    '3': 1700
-                }
-            },
-            {
-                start: '2023-06-16',
-                end: '2023-06-30',
-                price: {
-                    '2': 1800,
-                    '3': 2100
-                }
-            },
-            {
-                start: '2023-07-01',
-                end: '2023-07-10',
-                price: {
-                    '2': 2000,
-                    '3': 2300
-                }
-            },
-        ],
-}
+let prices;
 let startDateInput;
 let endDateInput;
 let roomTypeSelect;
@@ -41,8 +14,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     roomTypeSelect = document.getElementById('room-type');
     guestsQtySelect = document.getElementById('guests-qty');
     resultElement = document.getElementById('result');
-
-    onSelectRoomType();
 
     const savedStartDate = localStorage.getItem('startDate');
     if (savedStartDate) {
@@ -91,6 +62,8 @@ function loadData() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         console.log(this.responseText);
+        prices = JSON.parse(this.responseText);
+        onSelectRoomType();
     }
     xhttp.open("GET", "data.json");
     xhttp.send();
