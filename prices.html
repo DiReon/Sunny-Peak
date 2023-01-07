@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостевой Дом "Солнечный Пик"</title>
+    <link rel="shortcut icon" href="Pictures/favicon.ico" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="prices.js"></script>
+    <link rel="stylesheet" href="thumbcarousel styles.css">
+    <link rel="stylesheet" href="prices-styles.css">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 28px 0 0;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            background-color: rgb(223, 221, 221);
+
+        }
+
+        section {
+            background-color: white;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            max-height: 70%;
+        }
+
+        .align-vertically {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .welcome-container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #welcome-background {
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: -20%;
+
+        }
+
+        .img-thumbnail img {
+            height: 100px;
+            object-fit: cover;
+        }
+
+        h2 {
+            padding-top: 50px;
+        }
+
+        h5 {
+            text-align: center;
+        }
+
+        .feedback {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feedback img {
+            width: 100%;
+        }
+
+        .rounded-circle {
+            height: 125px;
+            width: auto;
+        }
+
+        .col-sm {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+        }
+
+        .tick li:before {
+            content: '✓';
+        }
+
+        @media screen and (max-width: 600px) {
+            h1, h2 {
+                font-size: 1rem;
+            }
+
+            .carousel, .thumbcarousel, .feedback, .iframe, .tick {
+                width: 90% !important;
+            }
+
+            #welcome-background {
+                margin-top: 100px;
+                margin-bottom: 0%;
+            }
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
+<nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top" style="margin-bottom: 50px; width: 100%">
+    <div class="text-white">
+        "Солнечный Пик"
+        <a class='link text-white' href="tel: +7-987-252-5260" style="font-size: 0.8rem">+7-987-252-52-60</a>
+    </div>
+    <button class="navbar-toggler" type="button" aria-label="Close" data-target="#collapsibleNavbar"
+            data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="collapsibleNavbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav d-inline-flex flex-row flex-wrap">
+            <li class="nav-item pr-3"><a class="nav-link" href="index.html#about_us">О нас</a></li>
+            <li class="nav-item pr-3"><a class="nav-link" href="index.html#rooms">Номера</a></li>
+            <li class="nav-item pr-3"><a class="nav-link" href="index.html#our_photos">Фотоальбом</a></li>
+            <li class="nav-item pr-3"><a class="nav-link" href="index.html#feedback">Отзывы</a></li>
+            <li class="nav-item pr-3"><a class="nav-link" href="index.html#contacts">Контакты</a></li>
+            <li class="nav-item pr-3"><a class="nav-link" href="prices.html">Цены</a></li>
+        </ul>
+
+    </div>
+</nav>
+<script>
+    $(document).ready(function () {
+        $("#collapsibleNavbar").on("show.bs.collapse", function () {
+            $(".navbar-toggler").html('<span aria-hidden="true">&times;</span>');
+        });
+        $("#collapsibleNavbar").on("hide.bs.collapse", function () {
+            $(".navbar-toggler").html('<span class="navbar-toggler-icon"></span>');
+        });
+    });
+    const navbar = document.getElementById('collapsibleNavbar');
+    navbar.onclick = function () {
+        navbar.classList.remove('show');
+        $(".navbar-toggler").html('<span class="navbar-toggler-icon"></span>');
+    }
+</script>
+
+<section>
+    <label for="start">Дата заезда:</label>
+    <input type="date" lang="ru-RU" id="start" name="start">
+    <label for="start">Дата выезда:</label>
+    <input type="date" lang="ru-RU" id="end" name="end">
+
+    <label>Тип номера:</label>
+    <select id="room-type" onchange="onSelectRoomType()">
+            <option>Двухместный</option>
+            <option>Трехместный</option>
+            <option>Трехместный на первом этаже</option>
+            <option>Двухкомнатный люкс</option>
+            <option>Двухкомнатные апартаменты</option>
+    </select>
+<!--    <div class="dropdown">-->
+<!--        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">-->
+<!--            Выберите тип номера-->
+<!--        </button>-->
+<!--        <div class="dropdown-menu">-->
+<!--            <button class="dropdown-item" type="button">Двухместный</button>-->
+<!--            <button class="dropdown-item" type="button">Трехместный</button>-->
+<!--            <button class="dropdown-item" type="button">Трехместный на первом этаже</button>-->
+<!--            <button class="dropdown-item" type="button">Двухкомнатный люкс</button>-->
+<!--            <button class="dropdown-item" type="button">Двухкомнатные апартаменты</button>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <label>Количество гостей:</label>
+    <select id="guests-qty">
+        <option hidden>Выберите количество</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+    </select>
+
+    <button class="btn btn-primary" id="calculate-btn" onclick="calculate()">Рассчитать</button>
+    <span id="result"></span>
+
+
+</section>
+
+</body>
+
+</html>

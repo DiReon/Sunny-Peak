@@ -1,0 +1,20 @@
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 12px;
+    padding: 20px 8px 0;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input, .dropdown {
+    grid-column: 2 / 3;
+}
+
+#result {
+    text-align: center;
+    line-height: 38px;
+    font-weight: bold;
+}
