@@ -60,12 +60,12 @@ function onSelectRoomType() {
 
 function loadData() {
     const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
+    xhttp.onload = function () {
         console.log(this.responseText);
         prices = JSON.parse(this.responseText);
         onSelectRoomType();
     }
-    xhttp.open("GET", "data.json");
+    xhttp.open("GET", "https://direon.github.io/Sunny-Peak/data.json");
     xhttp.send();
 }
 
