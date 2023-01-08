@@ -1,6 +1,6 @@
 section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 190px;
     grid-row-gap: 12px;
     padding: 20px 8px 0;
 }
@@ -13,8 +13,10 @@ input, .dropdown {
     grid-column: 2 / 3;
 }
 
-#result {
+#result, #days-quantity, #average {
     text-align: center;
-    line-height: 38px;
+}
+
+#result {
     font-weight: bold;
 }

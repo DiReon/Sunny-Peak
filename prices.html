@@ -173,12 +173,12 @@
 
 <section>
     <label for="start">Дата заезда:</label>
-    <input type="date" lang="ru-RU" id="start" name="start">
+    <input type="date" lang="ru-RU" id="start" name="start" onchange="onInputChanged()">
     <label for="start">Дата выезда:</label>
-    <input type="date" lang="ru-RU" id="end" name="end">
+    <input type="date" lang="ru-RU" id="end" name="end" onchange="onInputChanged()">
 
     <label>Тип номера:</label>
-    <select id="room-type" onchange="onSelectRoomType()">
+    <select id="room-type" onchange="onSelectRoomType()" class="dropdown">
         <option>Двухместный</option>
         <option>Трехместный</option>
         <option>Трехместный на первом этаже</option>
@@ -187,7 +187,7 @@
     </select>
 
     <label>Количество гостей:</label>
-    <select id="guests-qty">
+    <select id="guests-qty" onchange="onInputChanged()" class="dropdown">
         <option hidden>Выберите количество</option>
         <option>2</option>
         <option>3</option>
@@ -196,12 +196,16 @@
         <option>6</option>
         <option>7</option>
     </select>
-
-    <button class="btn btn-primary" id="calculate-btn" onclick="calculate()">Рассчитать</button>
+    <label>Общая стоимость</label>
     <span id="result"></span>
 
+    <label>Количество суток</label>
+    <span id="days-quantity"></span>
 
+    <label>Средняя цена суток</label>
+    <span id="average"></span>
 </section>
+<div><button class="btn btn-primary" id="calculate-btn" onclick="calculate()">Рассчитать</button></div>
 
 </body>
 

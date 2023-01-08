@@ -4,7 +4,8 @@ let endDateInput;
 let roomTypeSelect;
 let guestsQtySelect;
 let resultElement;
-
+let averagePriceElement;
+let daysQtyElement;
 loadData();
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     roomTypeSelect = document.getElementById('room-type');
     guestsQtySelect = document.getElementById('guests-qty');
     resultElement = document.getElementById('result');
+    averagePriceElement = document.getElementById('average');
+    daysQtyElement = document.getElementById('days-quantity');
 
     const savedStartDate = localStorage.getItem('startDate');
     if (savedStartDate) {
@@ -39,14 +42,21 @@ function calculate() {
         date.setDate(date.getDate() + 1);
     }
     const guestsQty = guestsQtySelect.value;
-
-    const totalPrice = dates
-        .map(day => periods.find(item => day >= new Date(item.start) && day <= new Date(item.end))?.price[guestsQty])
-        .reduce((prev, curr) => prev + curr, 0)
-    resultElement.innerHTML = totalPrice + ' рублей'
+    console.log(guestsQty);
+    if (guestsQty !== 'Выберите количество') {
+        const totalPrice = dates
+            .map(day => periods.find(item => day >= new Date(item.start) && day <= new Date(item.end))?.price[guestsQty])
+            .reduce((prev, curr) => prev + curr, 0)
+        resultElement.innerHTML = totalPrice + ' рублей';
+        daysQtyElement.innerHTML = dates.length + ' суток';
+        averagePriceElement.innerHTML = Math.round(totalPrice / dates.length) + ' рублей';
+    } else {
+        resultElement.innerHTML = 'Выберите количество гостей';
+    }
 }
 
 function onSelectRoomType() {
+    onInputChanged();
     const roomType = roomTypeSelect.value;
     for (const item of guestsQtySelect.children) {
         if (prices[roomType] && prices[roomType][0]?.price && Object.keys(prices[roomType][0].price).includes(item.innerHTML)) {
@@ -67,5 +77,11 @@ function loadData() {
     }
     xhttp.open("GET", "https://direon.github.io/Sunny-Peak/data.json");
     xhttp.send();
+}
+
+function onInputChanged() {
+    resultElement.innerHTML = '';
+    daysQtyElement.innerHTML = '';
+    averagePriceElement.innerHTML = '';
 }
 
