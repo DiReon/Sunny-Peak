@@ -170,7 +170,7 @@
     }
 </script>
 
-<section>
+<section style="font-size: 20px">
     <label for="start">Дата заезда:</label>
     <input type="date" lang="ru-RU" id="start" name="start" onchange="onInputChanged()">
     <label for="start">Дата выезда:</label>
@@ -195,6 +195,20 @@
         <option>6</option>
         <option>7</option>
     </select>
+
+    <label for="early-check-in" onchange="onInputChanged()">Ранний заезд</label>
+    <input type="checkbox" id="early-check-in">
+
+    <label for="late-check-out" onchange="onInputChanged()">Поздний выезд</label>
+    <input type="checkbox" id="late-check-out">
+
+    <label>Скидка:</label>
+    <select id="discount" onchange="onInputChanged()" class="dropdown">
+        <option>0%</option>
+        <option>10%</option>
+        <option>20%</option>
+    </select>
+
     <label>Общая стоимость</label>
     <span id="result"></span>
 

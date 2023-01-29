@@ -6,6 +6,10 @@ let guestsQtySelect;
 let resultElement;
 let averagePriceElement;
 let daysQtyElement;
+let discountElement;
+let earlyCheckInElement;
+let lateCheckOutElement;
+
 loadData();
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -17,6 +21,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     resultElement = document.getElementById('result');
     averagePriceElement = document.getElementById('average');
     daysQtyElement = document.getElementById('days-quantity');
+    discountElement = document.getElementById('discount');
+    earlyCheckInElement = document.getElementById('early-check-in');
+    lateCheckOutElement = document.getElementById('late-check-out');
 
     const savedStartDate = localStorage.getItem('startDate');
     if (savedStartDate) {
@@ -43,10 +50,22 @@ function calculate() {
     }
     const guestsQty = guestsQtySelect.value;
     console.log(guestsQty);
+    let nextDatePrice = 0;
     if (guestsQty !== 'Выберите количество') {
-        const totalPrice = dates
-            .map(day => periods.find(item => day >= new Date(item.start) && day <= new Date(item.end))?.price[guestsQty])
-            .reduce((prev, curr) => prev + curr, 0)
+        const dailyPrices = dates
+            .map(day => {
+                const price = periods.find(item => day >= new Date(item.start) && day <= new Date(item.end))?.price[guestsQty];
+                const nextDate = new Date(day);
+                nextDate.setDate(nextDate.getDate() + 1);
+                nextDatePrice = periods.find(item => nextDate >= new Date(item.start) && nextDate <= new Date(item.end))?.price[guestsQty];
+                return price;
+                });
+        const earlyCheckIn = earlyCheckInElement.checked ? dailyPrices[0] / 2 : 0;
+        const lateCheckOut = lateCheckOutElement.checked ? nextDatePrice / 2 : 0;
+        console.log(lateCheckOut);
+        const discount = +discountElement.value.split('%')[0];
+        const totalPrice = (dailyPrices.reduce((prev, curr) => prev + curr, 0) + earlyCheckIn + lateCheckOut) * (1 - discount / 100);
+        console.log(discount);
         resultElement.innerHTML = totalPrice + ' рублей';
         daysQtyElement.innerHTML = dates.length + ' суток';
         averagePriceElement.innerHTML = Math.round(totalPrice / dates.length) + ' рублей';
