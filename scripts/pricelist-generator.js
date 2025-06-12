@@ -1,4 +1,4 @@
-const data = require('../data.json');
+const data = require('../prices-2025.json');
 
 
 for (const roomType in data) {
@@ -6,7 +6,7 @@ for (const roomType in data) {
     for (const period of periods) {
         const price = period.price;
         for (const guestsQty in price) {
-            price[guestsQty] = price[guestsQty] * 1.3;
+            price[guestsQty] = price[guestsQty] * 1.1;
         }
     }
 }
