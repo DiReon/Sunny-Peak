@@ -94,7 +94,7 @@ function loadData() {
         prices = JSON.parse(this.responseText);
         onSelectRoomType();
     }
-    xhttp.open("GET", "https://direon.github.io/Sunny-Peak/prices-2025.json");
+    xhttp.open("GET", "https://direon.github.io/Sunny-Peak/prices-2026.json");
     xhttp.send();
 }
 
